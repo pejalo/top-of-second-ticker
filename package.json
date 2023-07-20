@@ -1,0 +1,14 @@
+{
+  "name": "top-of-second-ticker",
+  "version": "0.1.1",
+  "type": "module",
+  "description": "Call a function at the top of every second",
+  "main": "main.js",
+  "author": "Peter LoBue <public@pejalo.net> (https://github.com/pejalo)",
+  "license": "ISC",
+  "homepage": "https://github.com/pejalo/top-of-second-ticker",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/pejalo/top-of-second-ticker.git"
+  }
+}
