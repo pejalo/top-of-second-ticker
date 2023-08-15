@@ -60,6 +60,8 @@ document.addEventListener('visibilitychange', (_) => {
   
   `shouldExecuteCallbackImmediately` behaves just like the argument to `.start(...)` above.
 
+  This returns `true` if a `callback` was still remembered and either just executed (immediately), or will execute at the top of the next second.
+
 - `.stop()` takes no arguments.
   
   Once stopped, the `callback` is forgotten, and `resume()` has no effect (until you call `.start(...)` again).

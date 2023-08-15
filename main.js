@@ -21,7 +21,7 @@ export default class {
   resume(shouldExecuteCallbackImmediately = true) {
     if (!this._startDate || !this._callback)
     // ticker was stopped or never started, thus cannot be resumed
-      return
+      return false
     this._isRunning = true
     // set this value for `go` to close over
     const thisInstanceStartDate = this._startDate
@@ -40,5 +40,6 @@ export default class {
       const millisecondsToWait = topOfNextSecond - nowValue
       setTimeout(go.bind(this, true, new Date(topOfNextSecond)), millisecondsToWait)
     }).bind(this)(shouldExecuteCallbackImmediately, undefined)
+    return true
   }
 }
