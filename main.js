@@ -20,17 +20,17 @@ export default class {
 
   resume(shouldExecuteCallbackImmediately = true) {
     if (!this._startDate || !this._callback)
-    // ticker was stopped or never started, thus cannot be resumed
+      // ticker was stopped or never started, thus cannot be resumed
       return false
     this._isRunning = true
     // set this value for `go` to close over
     const thisInstanceStartDate = this._startDate
     ;(function go(shouldExecuteCallback, scheduledDate) {
       if (this._startDate !== thisInstanceStartDate)
-      // ticker was either stopped, or started again. this instance of `go` is no longer valid
+        // ticker was either stopped, or started again. this instance of `go` is no longer valid
         return
       if (!this._isRunning)
-      // ticker was paused. wait until it is resumed
+        // ticker was paused. wait until it is resumed
         return
       if (shouldExecuteCallback)
         this._callback(scheduledDate)
