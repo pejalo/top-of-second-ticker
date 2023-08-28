@@ -12,6 +12,7 @@ export default class {
   stop() {
     this._startDate = undefined
     this._callback = undefined
+    this._isRunning = false
   }
 
   pause() {
@@ -41,5 +42,9 @@ export default class {
       setTimeout(go.bind(this, true, new Date(topOfNextSecond)), millisecondsToWait)
     }).bind(this)(shouldExecuteCallbackImmediately, undefined)
     return true
+  }
+
+  getIsRunning() {
+    return this._isRunning
   }
 }

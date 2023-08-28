@@ -12,7 +12,7 @@ npm install top-of-second-ticker --save
 
 ## Summary
 
-This package exposes a single class with four methods: `start(callback)`, `pause()`, `resume()`, `stop()`.
+This package exposes a single class with five methods: `start(callback)`, `pause()`, `resume()`, `stop()`, `getIsRunning()`.
 
 ## Example
 
@@ -65,3 +65,5 @@ document.addEventListener('visibilitychange', (_) => {
 - `.stop()` takes no arguments.
   
   Once stopped, the `callback` is forgotten, and `resume()` has no effect (until you call `.start(...)` again).
+
+- `.getIsRunning()` will return false if stopped or paused.
